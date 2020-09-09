@@ -8,7 +8,7 @@ class TestCustomer(unittest.TestCase):
 
     def setUp(self):
         self.drink = Drink("Elven Wine", 9.99)        
-        self.customer = Customer("Aragorn", 100.00)
+        self.customer = Customer("Aragorn", 100.00, 72)
         self.pub = Pub("The Prancing Pony", 100, self.drink)
 
     def test_customer_name(self):
@@ -26,6 +26,9 @@ class TestCustomer(unittest.TestCase):
         self.pub.increase_till(self.drink)
         self.assertEqual(90.01, self.customer.wallet)
         self.assertEqual(109.99, self.pub.till)
+
+    def test_customer_age(self):
+        self.assertEqual(72, self.customer.age)
 
 
     
