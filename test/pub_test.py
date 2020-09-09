@@ -7,8 +7,8 @@ import pdb
 class TestPub(unittest.TestCase):
     def setUp(self):
         # self.drink = [{"name": "Elven Wine", "price": 9.99}, {"name": "Dwarf Ale", "price": 10.99}]
-        drink_1 = Drink("Elven Wine", 9.99)
-        drink_2 = Drink("Dwarf Ale", 10.99)
+        drink_1 = Drink("Elven Wine", 9.99, 12)
+        drink_2 = Drink("Dwarf Ale", 10.99, 6)
         self.drink = [drink_1, drink_2]
         self.pub = Pub("The Prancing Pony", 100, self.drink)
 
