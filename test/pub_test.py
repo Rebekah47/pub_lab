@@ -28,6 +28,6 @@ class TestPub(unittest.TestCase):
         self.assertEqual(2, len(self.drink))
     
     def test_drink_name(self):
-        self.assertEqual("Elven Wine", self.drink[0].name)
+        self.assertEqual(drink_1, self.drink[0])
     
     
