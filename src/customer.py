@@ -7,4 +7,9 @@ class Customer:
     def reduce_wallet(self, drink):
         self.wallet -= drink.price
 
-    
+    def customer_over_age(self, customer):
+        
+        if customer.age >= 18:
+            return True
+        else:
+             return False
