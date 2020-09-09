@@ -28,10 +28,6 @@ class TestCustomer(unittest.TestCase):
 
     def test_customer_has_age(self):
         self.assertEqual(72, self.customer.age)
-
-    def test_customer_over_age(self):
-        self.customer = Customer("Frodo", 20, 12)
-        self.assertEqual(False, self.customer.customer_over_age(self.customer))
     
     def test_customer_drunk_level(self):
         self.assertEqual(0, self.customer.drunkness_level)   

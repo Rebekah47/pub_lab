@@ -30,6 +30,6 @@ class TestPub(unittest.TestCase):
     def test_drink_name(self):
         self.assertEqual("Elven Wine", self.drink[0].name)
     
-   def test_customer_over_age(self):
+    def test_customer_over_age(self):
         self.customer = Customer("Frodo", 20, 12)
         self.assertEqual(False, self.customer.customer_over_age(self.customer))
