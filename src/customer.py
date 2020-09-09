@@ -9,15 +9,12 @@ class Customer:
         self.wallet -= drink.price
 
     def buy_drink(self, customer, pub, drink):
-        customer.reduce_wallet(drink)
-        pub.increase_till(drink)
-
-    def customer_over_age(self, customer):
-        if customer.age >= 18:
-            return True
+        if pub.customer_over_age(customer):
+            customer.reduce_wallet(drink)
+            pub.increase_till(drink)
         else:
-             return False
-    
+            print("No drink for you!")
+        
     def drunkness_level_increase(self, customer, drink):
         customer.drunkness_level += drink.alcohol_level
         
