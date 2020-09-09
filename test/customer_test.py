@@ -22,8 +22,7 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(90.01, self.customer.wallet)
     
     def test_buy_drink(self):
-        self.customer.reduce_wallet(self.drink)
-        self.pub.increase_till(self.drink)
+        self.customer.buy_drink(self.customer, self.pub, self.drink)
         self.assertEqual(90.01, self.customer.wallet)
         self.assertEqual(109.99, self.pub.till)
 
@@ -35,4 +34,8 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(False, self.customer.customer_over_age(self.customer))
     
     def test_customer_drunk_level(self):
-        self.assertEqual(0, self.customer.drunkness_level)
+        self.assertEqual(0, self.customer.drunkness_level)   
+
+    def test_customer_drunk_level_inrease(self):
+        self.customer.drunkness_level_increase(self.customer, self.drink)
+        self.assertEqual(12, self.customer.drunkness_level)
